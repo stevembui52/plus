@@ -13,7 +13,6 @@ void prompt(char **av)
 	ssize_t numchar;
 	int i, j;
 	char *argv[MAX_CMD];
-	pid_t chpid;
 
 	while (1)
 	{
@@ -36,18 +35,7 @@ void prompt(char **av)
 		argv[j] = strtok(lnptr, " ");
 		while (argv[j])
 			argv[++j] = strtok(NULL, " ");
-		chpid = fork();
-		if (chpid == -1)
-			exit(1);
-		if (chpid == 0)
-		{
-			if (execve(argv[0], argv, NULL) == -1)
-				printf ("%s : No such file or directory\n", av[0]);
-		}
-		else 
-		{
-			wait(NULL);
-		}
+		forkexe(av, argv);
 	}
 	free(lnptr);
 }

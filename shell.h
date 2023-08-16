@@ -8,6 +8,6 @@
 int add(int a, int b);
 void prompt(char **av);
 char **parsestr(char *str);
-void execcmd(char **avst, char *envp[]);
+void forkexe(char **av, char *argv[]);
 
 #endif
