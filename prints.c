@@ -1,10 +1,9 @@
 #include "shell.h"
-/**
-  *
-  *
-  *
-  *
-  */
+/*
+ * _strlen - Calculate the length of the string
+ * @s:pointer
+ * Return:length of the string
+ */
 int _strlen(char *s)
 {
 	int len = 0;
@@ -17,14 +16,13 @@ int _strlen(char *s)
 	return (len);
 }
 /**
-  *
-  *
-  *
-  *
-  */
+ * printstr - prints a string to the standard output
+ * @c:pointer to the string to be printed.
+ * Return:number of characters written
+ */
 int printstr(char *c)
 {
-	return(write(1, c, _strlen(c)));
+	return (write(1, c, _strlen(c)));
 }
 
 
