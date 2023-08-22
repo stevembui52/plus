@@ -14,7 +14,7 @@ void prompt(char **av)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-			write(1, "#cisfun$ ", strlen("#cisfun$ "));
+			write(1, "#cisfun$ ", _strlen("#cisfun$ "));
 		getext(lnptr, argv, n);
 		forkexe(av, argv);
 	}
