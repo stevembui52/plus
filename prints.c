@@ -1,5 +1,5 @@
 #include "shell.h"
-/*
+/**
  * _strlen - Calculate the length of the string
  * @s:pointer
  * Return:length of the string
@@ -25,13 +25,11 @@ int printstr(char *c)
 	return (write(1, c, _strlen(c)));
 }
 /**
-  *
-  *
-  *
-  *
+  * printchr - prints a single character
+  * @st: character to check
+  * Return:no of characters printed
   */
 int printchr(char st)
 {
-	return(write(1, &st, 1));
+	return (write(1, &st, 1));
 }
-

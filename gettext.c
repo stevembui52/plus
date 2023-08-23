@@ -1,6 +1,5 @@
 #include "shell.h"
 /**
- * /**
  * getext - Read a line from stdin and extract arguments into an array.
  * @lnptr: Pointer to the line read from stdin.
  * @argv: Array of character pointers to store extracted arguments.

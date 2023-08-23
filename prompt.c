@@ -23,8 +23,6 @@ void prompt(char **av)
 		}
 		else
 			forkexe(av, argv, path);
-		
-	
 	}
 	free(lnptr);
 }
