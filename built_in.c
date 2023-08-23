@@ -4,7 +4,7 @@
  * @arg: pointer with the direction argument.
  * @lineptr: standar input string
  * @_exit: value of exit
- * Return: None
+ * Return: None.
  */
 void _exit_command(char **arg, char *lineptr, int _exit)
 {
