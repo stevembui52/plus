@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  *_strcat - copy string to another string.
- *@dest: char
+ *@dest: char.
  *@src: char.
  *Return: dest
  *
