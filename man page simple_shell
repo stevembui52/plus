@@ -1,0 +1,9 @@
+SIMPLE SHELL PROJECT
+DESCRIPTION 
+The project command is a simple shell project program which demonstrates the basic functionality of
+a command line interpreter.it provides a command prompt where users can enter and execute various commands.
+The shell project supports basic commands execution,input/output redirections, and piping of commands.
+COMMANDS
+The project shell supports the following types of commands:
+External commands
+Users can execute external commands available in the systems pathe eg ls,mkdir,echo etc.
