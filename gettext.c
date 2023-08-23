@@ -27,5 +27,7 @@ char *getext(char *lnptr, char *argv[MAX_CMD], size_t n)
 	argv[j] = strtok(lnptr, " ");
 	while (argv[j])
 		argv[++j] = strtok(NULL, " ");
+	argv[j] = NULL;
 	return (lnptr);
+
 }

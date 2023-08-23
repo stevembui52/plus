@@ -5,7 +5,7 @@
  *@av:the argument vector
  *@argv:arguments to pass
  */
-void forkexe(char **av, char *argv[])
+void forkexe(char **av, char *argv[], char *path)
 {
 	pid_t chpid;
 
@@ -14,8 +14,8 @@ void forkexe(char **av, char *argv[])
 		exit(1);
 	if (chpid == 0)
 	{
-		if (execve(argv[0], argv, NULL) == -1)
-			printf("%s : No such file or directory\n", av[0]);
+		if (execve(path, argv, NULL) == -1)
+			_printf("%s : No such file or directory\n", av[0]);
 	}
 	else
 	{

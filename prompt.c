@@ -7,7 +7,7 @@
  */
 void prompt(char **av)
 {
-	char *lnptr = NULL;
+	char *lnptr = NULL, *path;
 	size_t n = 0;
 	char *argv[MAX_CMD];
 
@@ -16,7 +16,15 @@ void prompt(char **av)
 		if (isatty(STDIN_FILENO))
 			write(1, "#cisfun$ ", _strlen("#cisfun$ "));
 		getext(lnptr, argv, n);
-		forkexe(av, argv);
+		path = getloc(argv[0]);
+		if  (path ==  NULL)
+		{
+			forkexe(av, argv, path);
+		}
+		else
+			forkexe(av, argv, path);
+		
+	
 	}
 	free(lnptr);
 }

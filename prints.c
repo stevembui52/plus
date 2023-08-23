@@ -26,5 +26,14 @@ int printstr(char *c)
 {
 	return(write(1, c, _strlen(c)));
 }
-
+/**
+  *
+  *
+  *
+  *
+  */
+int printchr(char st)
+{
+	return(write(1, &st, 1));
+}
 

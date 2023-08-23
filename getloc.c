@@ -10,10 +10,10 @@
 	
 	pathcpy = strdup(path);
 	pathtok = strtok(pathcpy, ":");
-	filepath = malloc(_strlen(arg) + _strlen(pathtok) + 2);
+	filepath = malloc(strlen(arg) + strlen(pathtok) + 2);
 	while (pathtok != NULL)
 	{
-		strcat(filepath, pathtok);
+		strcpy(filepath, pathtok);
 		strcat(filepath, "/");
 		strcat(filepath, arg);
 		strcat(filepath, "\0");
@@ -26,6 +26,7 @@
 		pathtok = strtok(NULL, ":");
 	}
 	free(filepath);
+	free(pathcpy);
 	return (NULL);
 }
 /**

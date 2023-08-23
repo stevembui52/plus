@@ -8,6 +8,7 @@
 #include <limits.h>
 #include <signal.h>
 #include <sys/wait.h>
+#include <stdarg.h>
 #include <sys/types.h>
 
 #define BUF_SIZE 1024
@@ -20,11 +21,13 @@ extern char **environ;
 int add(int a, int b);
 void prompt(char **av);
 char **parsestr(char *str);
-void forkexe(char **av, char *argv[]);
+void forkexe(char **av, char *argv[], char *path);
 char *location(char *path, char *arg);
 char *getloc(char *arg);
+int printchr(char st);
 int _strlen(char *s);
 int printstr(char *c);
+int _printf(const char *format, ...);
 char *getext(char *lnptr, char *argv[MAX_CMD], size_t n);
 
 #endif
