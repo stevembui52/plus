@@ -6,7 +6,7 @@ size_t _strcspn(const char *s1, const char *s2);
 
 /**
  * _strtok - breaks the string s1 into tokens and null-terminates them.
- * Delimiter-Characters at the beginning and end
+ * Delimiter-Characters at the beginning and end.
  *of str are skipped. On each subsequent call delim may change.
  * @str: string to tokenize
  * @delim: string with the character that delimit srt.
