@@ -2,7 +2,7 @@
 /**
  *_strcat - copy string to another string.
  *@dest: char
- *@src: char
+ *@src: char.
  *Return: dest
  *
  */
