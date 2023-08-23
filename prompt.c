@@ -1,9 +1,9 @@
 #include "shell.h"
 #include <sys/wait.h>
 /**
+ * prompt - This function displays a shell prompt
  *
- *
- *
+ * @av:array of command line argument string
  */
 void prompt(char **av)
 {
