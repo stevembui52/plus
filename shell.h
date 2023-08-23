@@ -1,33 +1,34 @@
 #ifndef SHELL_H
 #define SHELL_H
+#define _GNU_SOURCE
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
-#include <fcntl.h>
-#include <limits.h>
-#include <signal.h>
-#include <sys/wait.h>
-#include <stdarg.h>
+#include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <errno.h>
 
-#define BUF_SIZE 1024
-#define TOK_BUFSIZE 128
-#define TOK_DELIM " \t\r\n\a"
-#define MAX_CMD 10
-/* points to array of character pointers to the environment strings */
 extern char **environ;
 
-int add(int a, int b);
-void prompt(char **av);
-char **parsestr(char *str);
-void forkexe(char **av, char *argv[], char *path);
-char *location(char *path, char *arg);
-char *getloc(char *arg);
-int printchr(char st);
+int _strcmp(char *s1, char *s2);
+size_t _strncmp(char *s1, char *s2, size_t n);
 int _strlen(char *s);
-int printstr(char *c);
-int _printf(const char *format, ...);
-char *getext(char *lnptr, char *argv[MAX_CMD], size_t n);
+char *_strcpy(char *dest, char *src);
+char *_strcat(char *dest, char *src);
+int _putchar(char c);
 
-#endif
+char *_get_path(char **env);
+int _values_path(char **arg, char **env);
+char *_getline_command(void);
+void _getenv(char **env);
+char **_get_token(char *lineptr);
+void _exit_command(char **args, char *lineptr, int _exit);
+int _fork_fun(char **arg, char **av, char **env,
+char *lineptr, int np, int c);
+char *_strtok(char *str, const char *delim);
+
+
+#endif /* SHELL_H */
