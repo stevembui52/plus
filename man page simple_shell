@@ -21,7 +21,7 @@ INTERACTIVE MODE
 When run without any arguments, the project command starts an interactive shell session users 
 can type commands at the prompt and press enter to execute them.To exit the shell we use  "EXIT" command
 AUTHORS:
-                     STEPHEN MBUI stevembui52@gmail.com
+                     STEPHEN MBUI stevembui52@gmail.com. 
                      BENSON MUIGAI muigaibenson37@gmail.com
 REPORT BUGS:
           muigaibenson37@gmail.com/stevembui52@gmail.com
